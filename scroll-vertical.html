@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    .doc-scroller {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      overflow: auto;
+      scroll-snap-points-y: repeat(100%);
+      scroll-snap-type: mandatory;
+      scroll-snap-destination: 100% 0%;
+    }
+
+    .page {
+      float: left;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .one {
+      background-color: red;
+    }
+
+    .two {
+      background-color: yellow;
+    }
+
+    .three {
+      background-color: blue;
+    }
+
+    .four {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="doc-scroller">
+    <div class="page one"></div>
+    <div class="page two"></div>
+    <div class="page three"></div>
+    <div class="page four"></div>
+  </div>
+  <script src="./polyfill.js"></script>
+  <script src="./scrollsnap-polyfill.js"></script>
+</body>
+</html>
